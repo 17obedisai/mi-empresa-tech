@@ -1,6 +1,6 @@
 import React from 'react';
-import Hero from '../components/sections/Hero';
-import Services from '../components/sections/Services';
+import Hero from '../components/common/Hero';
+import Services from '../components/common/Services';
 
 const HomePage = () => {
   return (
