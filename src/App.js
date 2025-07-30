@@ -10,7 +10,7 @@ import Footer from './components/layout/Footer';
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-[#0b0f19]">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />

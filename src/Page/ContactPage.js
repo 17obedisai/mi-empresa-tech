@@ -6,6 +6,7 @@ const ContactPage = () => {
     email: '',
     message: ''
   });
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('¡Mensaje enviado!');
@@ -17,53 +18,58 @@ const ContactPage = () => {
       [e.target.name]: e.target.value
     });
   };
-    return (
+
+  return (
     <div className="pt-20">
-      <div className="bg-purple-600 text-white py-16">
+      <div className="bg-gradient-to-br from-purple-900 to-blue-800 text-white py-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl font-bold mb-4">Contáctanos</h1>
-          <p className="text-xl">Hablemos sobre tu proyecto</p>
+          <h1 className="text-4xl font-extrabold mb-4">Contáctanos</h1>
+          <p className="text-xl text-purple-100">Hablemos sobre tu proyecto o idea digital</p>
         </div>
       </div>
-          <div className="py-16 bg-gray-50">
+
+      <div className="py-20 bg-[#0b0f19]">
         <div className="max-w-2xl mx-auto px-6">
-          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg">
-            <div className="mb-4">
-              <label className="block text-gray-700 font-medium mb-2">Nombre</label>
+          <form
+            onSubmit={handleSubmit}
+            className="bg-[#1c1e2e] p-8 rounded-xl shadow-xl border border-white/10"
+          >
+            <div className="mb-6">
+              <label className="block text-gray-200 font-semibold mb-2">Nombre completo</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border rounded-lg"
+                className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 required
               />
             </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 font-medium mb-2">Email</label>
+            <div className="mb-6">
+              <label className="block text-gray-200 font-semibold mb-2">Correo electrónico</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border rounded-lg"
+                className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 required
               />
             </div>
-            <div className="mb-6">
-              <label className="block text-gray-700 font-medium mb-2">Mensaje</label>
+            <div className="mb-8">
+              <label className="block text-gray-200 font-semibold mb-2">Mensaje</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                rows="5"
-                className="w-full px-4 py-3 border rounded-lg"
+                rows="6"
+                className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 required
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700"
+              className="w-full bg-gradient-to-r from-purple-800 to-indigo-800 text-white py-3 rounded-lg font-semibold hover:from-pink-500 hover:to-purple-600 transition"
             >
               Enviar Mensaje
             </button>

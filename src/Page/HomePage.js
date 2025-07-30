@@ -4,11 +4,12 @@ import Services from '../components/common/Services';
 
 const HomePage = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-[#0b0f19] text-white">
       <Hero />
       <Services />
     </div>
   );
 };
+
 
 export default HomePage;
